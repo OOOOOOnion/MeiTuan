@@ -1,0 +1,78 @@
+@CHARSET "UTF-8";
+
+body {
+	width: 1334px;
+	/* border: 1px solid #888; */
+}
+
+#login-top-pic img {
+	margin-left: 150px;
+}
+
+
+
+#show-pic {
+	width: 480px;
+	height: 370px;
+	margin-left: 150px;
+	margin-top: 50px;
+	/* border: 1px solid #888; */
+	/* background-color: grey; */
+	float: left;
+	/* margin:5px; */
+	position: relative;
+}
+
+#logindiv {
+	width: 540px;
+	
+	margin-left: 100px;
+	margin-top: 100px;
+	/* border: 1px solid #888; */
+	background-color: white;
+	float: left;
+	/* margin:5px; */
+	position: relative;
+}
+
+
+.error {
+	color: red;
+}
+
+.t {
+	text-align: left;
+	margin-top:10px;
+	margin-left:10px;
+}
+#uaccount{
+	margin-top:10px;
+	height:30px;
+	width:240px;
+	border:1px solid #e5e5e5;
+	
+}
+#password{
+	margin-top:10px;
+	
+	height:30px;
+	width:240px;
+	border:1px solid #e5e5e5;
+	
+}
+#login{
+	margin-top:5px;
+	
+	height:30px;
+	width:240px;
+	border:1px solid #e5e5e5;
+	background-color: yellow;
+}
+#bb{
+	margin-top:15px;
+	
+	height:30px;
+	width:240px;
+	
+	
+}

@@ -1,0 +1,48 @@
+.error{
+	color:red;
+}
+body{
+	width:1354px;
+}
+#reg-top-logo{
+
+height:50px;
+/* border:1px solid grey; */
+}
+#reg-top-logo img{
+	margin-left:300px;
+	margin-top:0px;
+}
+#横线{
+	margin-top:10px;
+	background-color:yellow;
+	height:2px;
+	
+}
+
+#注册div{
+	margin-left:300px;
+	margin-top:20px;
+}
+.t{
+	text-align: right;
+	
+}
+
+input{
+	margin-top:15px;
+	margin-left:10px;
+	height:30px;
+	width:280px;
+	border:1px solid #e5e5e5;
+	
+}
+#sub{
+	background-color:yellow;
+}
+hr{
+	color:grey;
+}
+#reg-foot img{
+	margin-left:500px;
+}

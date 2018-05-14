@@ -1,0 +1,64 @@
+/*
+* @Author: Administrator
+* @Date:   2018-05-05 16:58:00
+* @Last Modified by:   Administrator
+* @Last Modified time: 2018-05-08 14:54:44
+*/
+
+
+.mc{
+	width: 240px;
+	height: 250px;
+	float: left;
+	margin-top:10px;
+	border-bottom:1px solid grey;
+	position: relative;
+	
+}
+
+.aa{
+	width: 18px;
+	height: 250px;
+	float: left;
+	margin-top:10px;
+	border-bottom:1px solid white;
+	position: relative;
+}
+
+.图片{
+	border: 1px solid grey;
+	width: 222px;
+	height: 140px;
+	margin:10px 8px;
+
+}
+
+.店名,.评分{
+	margin: 6px;
+	display: block;
+	font-size: 13px;
+}
+ 
+.起送,.配送费,.时间{
+	
+	display: inline;
+	font-size:10px;
+	width: 60px;
+	position:absolute; 
+}
+.起送{
+	margin-left: 6px;
+	left: 0px;
+	
+}
+.配送费{
+	left: 60px;
+	
+}
+.时间{
+	left: 190px;
+	
+}
+hr{
+	width: 970px;	
+}
