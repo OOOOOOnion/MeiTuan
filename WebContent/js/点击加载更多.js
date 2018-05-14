@@ -9,7 +9,7 @@ function changeBGC(id){
 		}
 $(function () {  
     $("#hhh").click(function () { 
-    	alert("aaaa");
+
     	var page = parseInt($("#page").val()); 
     	var height =  parseInt($("#商家").height());
     	
