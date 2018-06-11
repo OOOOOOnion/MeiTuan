@@ -2,9 +2,7 @@
  * 
  */
 $.validator.setDefaults({
-		submitHandler : function() {
-			alert("提交事件!");
-		},
+		
 
 	});
 
@@ -24,7 +22,7 @@ $.validator.setDefaults({
 			messages : {
 				uaccount : {
 					required : "请输入账户名",
-					minlength : "账户名必需由两个以上字母及数字构成组成",
+					minlength : "必需由两个以上字母及数字构成组成",
 				},
 				password : {
 					required : "请输入密码",

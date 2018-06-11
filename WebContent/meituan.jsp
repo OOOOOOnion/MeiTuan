@@ -27,7 +27,15 @@
 			<div id="top-center">
 				<div id="定位">越秀区&nbsp;仲恺农业工程学院海珠校区&nbsp;|&nbsp;切换地址</div> 
 				
-				<div id="我的"><a href="#">注册</a>  &nbsp;|&nbsp;<a href="#">登录</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;手机版&nbsp;&nbsp;&nbsp;&nbsp;美团网&nbsp;&nbsp;&nbsp;&nbsp;联系我们</div>
+				<div id="我的">
+				<%  if(session.getAttribute("uname")!=null){ %>
+						欢迎：<%=session.getAttribute("uname") %>
+						<a href="./uinfo.jsp">我的账户</a>
+				<%}else{%>
+					<a href="./register.jsp">注册</a>  &nbsp;|&nbsp;
+					<a href="./login.jsp">登录</a>
+				<%} %>
+				 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;手机版&nbsp;&nbsp;&nbsp;&nbsp;美团网&nbsp;&nbsp;&nbsp;&nbsp;联系我们</div>
 			</div>
 		</div>
 		<div id="top-search">

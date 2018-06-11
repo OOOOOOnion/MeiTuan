@@ -37,7 +37,7 @@ $(function () {
 	          
 	              
 	          html += "<div class='mc'id='"+data[i].sid+"' onmouseover=\"changeBGC(this.id)\" onmouseout=\"changeback(this.id)\">"+
-	          		  "<img  class='图片' src='pic\\"+data[i].spic+".jpg'>"+
+	          		  "<img  class='图片' src='spic\\"+data[i].spic+".jpg'>"+
 	          			"<span id='店名1' class='店名'>"+data[i].sname+"("+data[i].address+"店)</span>"+
 	          			"<span id='评分1' class='评分' style='font-size: 9px;'>评分：5.0</span>"+
 	          			"<span class='span3' style='margin:0px;' >"+

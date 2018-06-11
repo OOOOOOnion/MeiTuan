@@ -21,7 +21,7 @@
 			<img alt="" src="img/登陆页面侧图.png" />
 		</div>
 		<div id="logindiv">
-			<form action="" method="post" id="loginform">
+			<form action="./UserLoginServlet" method="post" id="loginform">
 				<table>
 					<tr>
 						<td class="t"><label for="uaccount">账户名</label></td>
@@ -39,7 +39,7 @@
 					</tr>
 
 					<tr>
-						<td><div id="bb"><input type="checkbox" id="autologin" value="true"/>7天内自动登陆 &nbsp;&nbsp;&nbsp;&nbsp;
+						<td><div id="bb"><input type="checkbox" id="autologin"  name = "autologin"/>7天内自动登陆 &nbsp;&nbsp;&nbsp;&nbsp;
 							<a href="#">忘记密码？</a></div>
 						</td>						
 					</tr>
