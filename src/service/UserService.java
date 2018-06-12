@@ -9,4 +9,18 @@ public class UserService {
 		Users eu  = udao.login(u);
 		return eu;
 	}
+
+	public boolean register(Users regu) {
+		boolean flag = false;
+		UserDao userDao = new UserDao();
+		flag = userDao.register(regu);
+		return flag;
+	}
+
+	public boolean isUserExists(String ua) {
+		boolean flag = false;
+		UserDao userDao = new UserDao();
+		flag = userDao.isUserExists(ua);
+		return flag;
+	}
 }

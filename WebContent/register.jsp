@@ -22,7 +22,7 @@
 	<div id="横线"></div>
 	<div id="注册div">
 	
-<form id="signupForm" method="post" action="">
+<form id="signupForm" method="post" action="UserRegisteServlet">
 	
   <table>
  
@@ -44,11 +44,7 @@
       
    </tr>
    
-   <tr>
-      <td class="t"><label for="upic">头像</label></td>
-      <td><input id="upic" name="upic" type="file"></td>
-      
-   </tr>
+  
    <tr>
    	 <td class="t"><label for="sub"></label></td>
       <td ><input class="submit" type="submit" value="同意以下协议并注册" name="sub" id="sub"></td>

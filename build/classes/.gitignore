@@ -1,5 +1,4 @@
-/ctrl/
-/model/
-/dao/
 /service/
-/filter/
+/util/
+/ctrl/
+/dao/

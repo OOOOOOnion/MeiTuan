@@ -43,4 +43,54 @@ public class UserDao {
 		
 		
 	}
+
+	public boolean register(Users regu) {
+		// TODO Auto-generated method stub
+		boolean flag = false;
+		Connection conn = null;  
+		conn = JDBCUtil.getConnection();
+		String sql = "insert users (uname,uaccount,password)  value(?,?,?)";
+		try {
+				PreparedStatement pstmt = conn.prepareStatement(sql);
+				pstmt.setString(1, regu.getUaccount());
+				pstmt.setString(2, regu.getUaccount());
+				pstmt.setString(3, regu.getPassword());
+				int i = pstmt.executeUpdate();
+				
+				if (i == 1) {
+					flag = true;
+				} else {
+					flag = false;
+				}
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return flag;
+		}
+
+	public boolean isUserExists(String ua) {
+		boolean flag = false;
+		Connection conn = null;  
+		conn = JDBCUtil.getConnection();
+		String sql  = "select * from users where uaccount = ? ";
+		
+		try {
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, ua);
+			
+			ResultSet rs = pstmt.executeQuery();
+			
+			if(rs.next()){
+				flag = true;
+				
+				
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return flag;
+		
+		
+	}
 }

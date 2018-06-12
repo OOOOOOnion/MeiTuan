@@ -3,9 +3,8 @@
  */
 
 $.validator.setDefaults({
-    submitHandler: function() {
-      alert("提交事件!");
-    },
+   
+  
 	
 });
 $().ready(function() {
@@ -31,11 +30,11 @@ $().ready(function() {
 	        minlength: 5,
 	        equalTo: "#password"
 	      },
-	      upic: {
+	    /*  upic: {
 	        required: true,
 	        extension:'jpg'
 	      },
-	      
+	      */
 	    },
 	    messages: {
 	      
@@ -53,7 +52,7 @@ $().ready(function() {
 	        minlength: "密码长度不能小于 5 ",
 	        equalTo: "两次密码输入不一致"
 	      },
-	      upic: "请选择jpg格式的图片",
+	    /*  upic: "请选择jpg格式的图片",*/
 	      
 	    }
 	});
