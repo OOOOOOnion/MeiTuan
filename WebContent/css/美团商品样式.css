@@ -25,7 +25,7 @@
 	position: relative;
 }
 
-.图片{
+.鍥剧墖{
 	border: 1px solid grey;
 	width: 222px;
 	height: 140px;
@@ -33,29 +33,29 @@
 
 }
 
-.店名,.评分{
+.搴楀悕,.璇勫垎{
 	margin: 6px;
 	display: block;
 	font-size: 13px;
 }
  
-.起送,.配送费,.时间{
+.璧烽��,.閰嶉�佽垂,.鏃堕棿{
 	
 	display: inline;
 	font-size:10px;
 	width: 60px;
 	position:absolute; 
 }
-.起送{
+.璧烽�亄
 	margin-left: 6px;
 	left: 0px;
 	
 }
-.配送费{
+.閰嶉�佽垂{
 	left: 60px;
 	
 }
-.时间{
+.鏃堕棿{
 	left: 190px;
 	
 }

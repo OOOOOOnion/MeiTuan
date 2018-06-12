@@ -1,0 +1,187 @@
+@CHARSET "UTF-8";
+
+	a:link,a:visited{
+			color:#e3e3e3;
+			text-decoration:none;
+		}
+
+		a:hover{
+			 color: white ; 
+					
+		}
+	body{
+			margin:0px auto;
+			width: 1344px;
+			height:auto;
+/* 			border: 1px solid black;*/			
+			background-color: #f5f5f5;
+		}
+		.div-top{
+			display: none;
+			width: 100%;
+			height: 80px;
+			background-color: white;
+		}
+		.div-top #top-search #搜索 img{
+			width:40px; 
+			height:36px ;
+			border: 1px solid #e5e5e5;
+		}
+		
+		#top{
+			height: 115px;
+			/* border: 1px solid black; */
+		}
+
+		#top-address{
+			background-color: #333333;
+			height: 28px;
+			/* border: 1px solid blue; */
+				
+		}
+		#top-center{
+					
+			margin-left: 175px;
+			width:995px;
+			/* border: 1px solid red; */
+		}
+		#定位{
+			width: 50%;
+			margin: 4px 0px;
+			font-size: 13px;
+			float: left;
+			color: #dddddd;
+		}
+		#top-center #我的{
+			width: 50%;
+			margin: 4px 0px;
+			text-align: right;
+			font-size: 13px;
+			float: right;
+			color: #dddddd;
+		}
+		
+
+		#top-search{
+			height: 83px;
+			/* border: 1px solid pink; */
+			background-color: #ffffff;
+
+		}
+		
+		#top-search #logo{
+			margin-left:170px;
+			margin-top:12px;
+			float:left;
+			/* border: 1px solid red; */
+		}
+		#top-search img{
+			
+			width:196px; 
+			height:57px ;
+			
+			/* margin: 5px; */
+		}
+		
+		#top-search #首页{
+			margin-left:150px;
+			margin-top:30px;
+			float:left;
+			/* border: 1px solid red; */
+			font-size: 17px;
+		}
+		#top-search #我的订单{
+			margin-left:60px;
+			margin-top:30px;
+			float:left;
+			/* border: 1px solid red; */
+			font-size: 17px;
+		}
+		#top-search #申请加盟{
+			margin-left:60px;
+			margin-top:30px;
+			float:left;
+			/* border: 1px solid red; */
+			font-size: 17px;
+		}
+		#top-search #搜索{						
+			margin-left:60px;
+			margin-top:23px;
+			float:left;
+			/* border: 1px solid red; */
+			font-size: 17px;
+		
+		}
+		
+		 #top-search input{			
+			width:260px; 
+			height:34px ;
+			border:none
+
+		} 
+		#top-search #搜索 div{
+			
+			float:left;
+			border: 1px solid #e5e5e5;
+		}
+		
+		#top-search #搜索 img{
+			width:40px; 
+			height:36px ;
+		}
+		
+	#info{
+		width:1000px;
+			height: 800px;
+			margin: 10px auto;
+			border:1px solid blue; 
+			background-color: #f5f5f5f5;
+			position:relative;
+	}
+	#left{
+		width:200px;
+		height:800px;
+		margin-left:0px;
+		border: 1px solid red;
+		position:absolute; 
+	}
+	#right{
+		width:800px;
+		height:800px;
+		border: 1px solid red;
+		margin-left:200px;
+		position:absolute; 
+	}
+	
+	
+	
+	
+	#foot{
+
+			height: 245px;
+			margin: 20px auto 0px auto;
+			/* border:1px solid red; */
+		}
+
+		#foot-more{
+			height: 185px;
+			margin: 0px auto;
+			/* border:1px solid green; */
+			background-color: #ffffff;
+
+		}
+		#foot-more img{
+			margin:20px 175px;
+		}
+
+		#foot-permit{
+			height: 58px;
+			margin: 0px auto ;
+			/* border:1px solid red; */
+			background-color: #f5f5f5f5;
+		}
+		
+		#foot-permit img{
+			margin:10px 400px;
+		} 
+		
