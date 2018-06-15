@@ -1,3 +1,4 @@
+
 /*
 * @Author: Administrator
 * @Date:   2018-05-05 16:58:00
@@ -5,7 +6,7 @@
 * @Last Modified time: 2018-05-08 14:54:44
 */
 
-
+@CHARSET "UTF-8";
 .mc{
 	width: 240px;
 	height: 250px;
@@ -25,7 +26,7 @@
 	position: relative;
 }
 
-.鍥剧墖{
+.图片{
 	border: 1px solid grey;
 	width: 222px;
 	height: 140px;
@@ -33,29 +34,29 @@
 
 }
 
-.搴楀悕,.璇勫垎{
+.店名,.评分{
 	margin: 6px;
 	display: block;
 	font-size: 13px;
 }
  
-.璧烽��,.閰嶉�佽垂,.鏃堕棿{
+.起送,.配送费,.时间{
 	
 	display: inline;
 	font-size:10px;
 	width: 60px;
 	position:absolute; 
 }
-.璧烽�亄
+.起送{
 	margin-left: 6px;
 	left: 0px;
 	
 }
-.閰嶉�佽垂{
+.配送费{
 	left: 60px;
 	
 }
-.鏃堕棿{
+.时间{
 	left: 190px;
 	
 }
