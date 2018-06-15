@@ -10,6 +10,15 @@
     <link rel="stylesheet" href="../css/metisMenu.css"/>
     <link rel="stylesheet" href="../css/demo.css"/>
     <link rel="stylesheet" href="../css/mini.css"/>
+    
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/metisMenu.js"></script>
+<script>
+    $(function () {
+        $('#menu').metisMenu();
+    });
+</script>
 </head>
 <body>
 <div class="clearfix">
@@ -25,9 +34,9 @@
                 <li>
                     <a href="#" aria-expanded="false">用户信息管理 <span class="fa arrow"></span></a>
                     <ul aria-expanded="false">
-                        <li><a href="www.baidu.com">查看用户信息</a></li>
+                        <li><a href="../meituan.jsp" target="right">查看用户信息</a></li>
                         <li><a href="#">添加用户信息</a></li>
-                        <li><a href="http://onokumus.com">删除用户信息</a></li>
+                        <li><a href="http://onokumus.com" target="right">删除用户信息</a></li>
                         <li><a href="#">修改用户信息</a></li>
                     </ul>
                 </li>
@@ -61,11 +70,3 @@
     </aside>
 </body>
 </html>
-<script src="../js/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/metisMenu.js"></script>
-<script>
-    $(function () {
-        $('#menu').metisMenu();
-    });
-</script>
