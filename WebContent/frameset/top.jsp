@@ -25,7 +25,7 @@
 			font-size: 15px;
 		}
 		.right{
-			margin-left: 1300px;
+			margin-left: 1100px;
 			position: relative;
 		}
 		.欢迎{

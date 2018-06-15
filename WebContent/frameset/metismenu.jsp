@@ -36,7 +36,11 @@
                     <ul aria-expanded="false">
                         <li><a href="../meituan.jsp" target="right">查看用户信息</a></li>
                         <li><a href="#">添加用户信息</a></li>
+
                         <li><a href="http://onokumus.com" target="right">删除用户信息</a></li>
+
+                        <li><a href="http://www.baidu.com" target="right">删除用户信息</a></li>
+
                         <li><a href="#">修改用户信息</a></li>
                     </ul>
                 </li>
