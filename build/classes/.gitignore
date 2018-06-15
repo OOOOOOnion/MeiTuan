@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 /bean/
+=======
+>>>>>>> 786f0869509e5cf8cfea14b425e4f0bbdecdf25e
 /ctrl/
 /dao/
 /filter/
 /model/
 /service/
 /util/
+<<<<<<< HEAD
+=======
+/bean/
+>>>>>>> 786f0869509e5cf8cfea14b425e4f0bbdecdf25e
