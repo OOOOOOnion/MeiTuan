@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>用户信息页</title>
-<link rel="stylesheet" type="text/css" href="css/用户信息页面.css">
+<link rel="stylesheet" type="text/css" href="../css/用户信息页面.css">
 </head>
 <body>
 		<div id="top">
@@ -26,13 +26,13 @@
 		</div>
 		<div id="top-search">
 			
-				<div id="logo"><img alt="" src="img/logo.png" ></div>
+				<div id="logo"><img alt="" src="../img/logo.png" ></div>
 				<div id="首页">首页</div>
 				<div id="我的订单">我的订单</div>
 				<div id="申请加盟">申请加盟</div>
 				<div id="搜索">
 					<div id="搜索内容"><input type="text" value=""/></div>
-					<div id="搜索图标"><img alt="" src="img/搜索.png" ></div>
+					<div id="搜索图标"><img alt="" src="../img/搜索.png" ></div>
 					
 				</div>
 		</div>
@@ -43,20 +43,15 @@
 	
 	
 	</iframe>
-		<div id="info">
-		<div id="left">
 		
-		</div>
-		<div id ="right"></div>
-		</div>
 		<div id="foot">
 		<div id="foot-more">
 			
-				<img alt="" src="img/更多服务.png" >
+				<img alt="" src="../img/更多服务.png" >
 			
 		</div>
 		<div id="foot-permit">
-			<img alt="" src="img/经营许可.png" >
+			<img alt="" src="../img/经营许可.png" >
 		</div>
 	</div>
 </body>
