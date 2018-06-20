@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+/model/
+/service/
+/util/
+/ctrl/
+/dao/
+=======
 /bean/
 /ctrl/
 /dao/
@@ -5,3 +12,4 @@
 /model/
 /service/
 /util/
+>>>>>>> 09af851bc22c6fbe0a6853bbc97d8fb232321a6c

@@ -1,0 +1,293 @@
+@CHARSET "UTF-8";
+#商家模块{
+	width:1000px;
+	height:130px;
+	margin:5px 0 0 170px;
+	background-color: white;
+	position: relative;
+}
+
+#商家照片{
+	margin:15px 0 15px 30px;
+	width:130px;
+	height:100px;
+}
+
+#商家店名{
+	display:inline;
+	margin-left:20px;
+	position: absolute;
+	top:35px;
+	font-weight: 900;
+}
+
+#商家评分{
+	width:130px;
+	height:30px;
+	margin-left:12px;
+	position: absolute;
+	top:70px;
+}
+
+#商家右边{
+	margin-left:500px;
+	height:130px;
+	position:absolute;
+	top:0px;
+}
+
+#送餐上{
+	width:200px;
+	position:absolute;
+	top:30px;
+	font-size:13px;
+}
+
+#送餐下左{
+	display:inline;
+	position: absolute;
+	top:55px;
+	width:200px;
+	font-size:30px;
+}
+
+#送餐下右{
+	display:inline;
+	position: absolute;
+	top:70px;
+	left:40px;
+	width:200px;
+	font-size:13px;
+}
+
+#起送上{
+	width:200px;
+	position:absolute;
+	top:30px;
+	left:200px;
+	font-size:13px;
+}
+
+#起送下左{
+	display:inline;
+	position: absolute;
+	top:55px;
+	left:200px;
+	width:200px;
+	font-size:30px;
+}
+
+#起送下右{
+	display:inline;
+	position: absolute;
+	top:70px;
+	left:240px;
+	width:200px;
+	font-size:13px;
+}
+
+#配送上{
+	width:200px;
+	position:absolute;
+	top:30px;
+	left:380px;
+	font-size:13px;
+}
+
+#配送下左{
+	display:inline;
+	position: absolute;
+	top:55px;
+	left:380px;
+	width:200px;
+	font-size:30px;
+}
+
+#配送下右{
+	display:inline;
+	position: absolute;
+	top:70px;
+	left:420px;
+	width:200px;
+	font-size:13px;
+}
+
+
+.商品详细信息{
+	width:600px;
+	height: auto;
+	position: relative;
+	border: 1px dashed rgb(208,208,208);
+	background-color: white;
+	margin:5px 0 5px 170px;
+}
+
+
+#商品图片{
+	margin:20px 0 20px 30px;
+	width: 180px;
+	height: 130px;
+}
+
+#商品名称字号{
+	position: absolute;
+	top: 35px;
+	left: 250px;
+	font-weight:800;
+}
+
+#商品名称{
+	width: 300px;
+	position: absolute;
+	top: 35px;
+	left: 330px;
+	font-weight:800;
+}
+
+#商品价格字号{
+	position: absolute;
+	top: 75px;
+	left: 250px;
+	font-weight:800;
+}
+
+#商品价格{
+	width: 300px;
+	position: absolute;
+	top: 75px;
+	left: 330px;
+	font-weight:800;
+}
+
+#购买{
+	position: absolute;
+	top: 115px;
+	left: 250px;
+	font-weight:800;
+	
+}
+
+.添加{
+	position: absolute;
+	top: 115px;
+	left: 500px;
+}
+
+#购物车{
+	width:350px;
+	position:fixed;
+	left:1100px;
+	top:255px;
+	
+}
+
+.购物车栏{
+	width:350px;
+	height:60px;
+	border-bottom:1px solid rgb(208,208,208);
+	background-color: white;
+}
+
+#结算{
+	width:350px;
+	height:50px;
+	background-color: white;
+}
+
+#配送费字样{
+	position:absolute;
+	top:80px;
+	left:10px;
+}
+
+#配送费价格{
+	position:absolute;
+	top:80px;
+	left:100px;
+	color:rgb(255,202,88);
+}
+
+#配送费价格人民币{
+	position:absolute;
+	top:80px;
+	left:80px;
+	color:rgb(255,202,88);
+}
+
+#总价字样{
+	position:absolute;
+	top:80px;
+	left:220px;
+}
+
+#总价人民币{
+	position:absolute;
+	top:73px;
+	left:260px;
+	color:red;
+	font-weight:800;
+	font-size:25px;
+}
+
+#总价价格{
+	position:absolute;
+	top:73px;
+	left:290px;
+	color:red;
+	font-weight:800;
+	font-size:25px;
+}
+
+#购物车图标{
+	float:left;
+	width:230px;
+	height:50px;
+}
+
+#立即下单{
+	position:absolute;
+	top:0px;
+	left:230px;
+	display:inline;
+	background-color:rgb(255,209,97);
+	font-size:20px;
+	font-weight:700;
+	padding:10px 38px 10px 38px;
+}
+
+#选中商品{
+	position:relative;
+}
+
+.选中商品名称{
+	position:absolute;
+	top:20px;
+	left:10px;
+}
+
+#选中商品数量{
+	position:absolute;
+	top:20px;
+	left:290px;
+}
+
+.选中商品价格{
+	position:absolute;
+	top:20px;
+	left:220px;
+	color:rgb(255,202,88);
+}
+
+.选中商品价格符号{
+	position:absolute;
+	top:20px;
+	left:200px;
+	color:rgb(255,202,88);
+}
+
+.选中商品价格金额{
+	position:absolute;
+	top:20px;
+	left:200px;
+	color:rgb(255,202,88);
+}

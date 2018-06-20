@@ -10,11 +10,12 @@
 	<link rel="stylesheet" type="text/css" href="css/美团商品样式.css">
 	<link rel="stylesheet" type="text/css" href="css/首页排版样式.css">
 	<script type="text/javascript" src="js/点击加载更多.js"></script>
-	<script type="text/javascript" src="js/首页展示下拉框.js"></script>
+	<script type="text/javascript" src="js/首页展示下拉框.js"></script>	
 	
 	
 </head>
 <body onload="$('#hhh').click()">
+
 	<div class="div-top">
 		<div id="下拉浮动框logo"><img alt="" src="img/logo.png" ></div>
 		<div id="浮动框搜索">
