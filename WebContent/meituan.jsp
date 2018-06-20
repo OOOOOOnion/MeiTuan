@@ -10,8 +10,6 @@
 	<link rel="stylesheet" type="text/css" href="css/首页排版样式.css">
 	<script type="text/javascript" src="js/点击加载更多.js"></script>
 	<script type="text/javascript" src="js/首页展示下拉框.js"></script>	
-	
-	
 </head>
 <body onload="$('#hhh').click()">
 

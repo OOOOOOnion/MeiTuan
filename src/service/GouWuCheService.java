@@ -1,18 +1,18 @@
 package service;
 
-import dao.DingdanDao;
-import model.Dingdan;
+import dao.GouWuCheDao;
+import model.GouWuChe;
 
 public class GouWuCheService {
-	DingdanDao dd=new DingdanDao();
-	public void addsp(Dingdan dingdan) {
-		String ddid = dingdan.getDdid();
-		String ddname=dingdan.getDdname();
-		String ddprice=dingdan.getDdprice();
-		String ddpic=dingdan.getDdpic();
-		String ddnum=dingdan.getDdnum();
+	GouWuCheDao gwcdao=new GouWuCheDao();
+	public void addsp(GouWuChe gwc) {
+		String ddid = gwc.getGwcid();
+		String ddname=gwc.getGwcname();
+		String ddprice=gwc.getGwcprice();
+		String ddpic=gwc.getGwcpic();
+		String ddnum=gwc.getGwcnum();
 		try {
-			dd.addDingdanInfo(dingdan);
+			gwcdao.addDingdanInfo(gwc);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

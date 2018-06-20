@@ -89,8 +89,6 @@
 			<img alt="" src="img/经营许可.png" >
 		</div>
 	</div>
-	<form>
-		<input type="text" id="隐藏" value=<%=sid%>>
-	</form>
+		<input type="hidden" id="隐藏" value=<%=sid%>>
 </body>
 </html>

@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.Dingdan;
+import model.GouWuChe;
 import net.sf.json.JSONObject;
 import service.GouWuCheService;
 
@@ -47,13 +47,13 @@ public class GouWuCheSrevlet extends HttpServlet {
 	      String pic = request.getParameter("pic");
 	      String id = request.getParameter("ddid");
 	      String num = request.getParameter("ddnum");
-	      Dingdan dingdan=new Dingdan();
-	      dingdan.setDdid(id);
-	      dingdan.setDdname(name);
-	      dingdan.setDdprice(price);
-	      dingdan.setDdpic(pic);
-	      dingdan.setDdnum(num);
-	      gs.addsp(dingdan);
+	      GouWuChe gwc=new GouWuChe();
+	      gwc.setGwcid(id);
+	      gwc.setGwcname(name);
+	      gwc.setGwcprice(price);
+	      gwc.setGwcpic(pic);
+	      gwc.setGwcnum(num);
+	      gs.addsp(gwc);
 	}
 
 }
