@@ -6,22 +6,21 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import model.Users;
 import service.UserService;
 
 /**
- * Servlet implementation class LoginServlet
+ * Servlet implementation class UserInfoServlet
  */
-@WebServlet("/LoginServlet")
-public class LoginServlet extends HttpServlet {
+@WebServlet("/UserInfoServlet")
+public class UserInfoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public LoginServlet() {
+    public UserInfoServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -31,31 +30,29 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		HttpSession session = request.getSession();
+		/*response.getWriter().append("InfoServlet,Served at: ").append(request.getContextPath());*/
+		int id = (int) request.getSession().getAttribute("uid");
+		String  uname = (String) request.getParameter("uname");
 		String uaccount = request.getParameter("uaccount");
 		String password = request.getParameter("password");
-		/*System.out.println(uaccount);
-		System.out.println(password);*/
-		String  autologin = request.getParameter("autologin") ;
-		Users loginu = new Users();
-		loginu.setUaccount(uaccount);
-		loginu.setPassword(password);
+		String phone = request.getParameter("phone");
+		String address = request.getParameter("address");
+		Users u = new Users();
+		u.setUid(id);
+		u.setUname(uname);
+		u.setUaccount(uaccount);
+		u.setPassword(password);
+		u.setPhone(phone);
+		u.setAddress(address);
 		UserService userService = new UserService();
-		Users exitsu = userService.login(loginu);
-		
-		if(exitsu!=null){
+		boolean flag = userService.modify(u);
+		if(flag){
 			
-			session.setAttribute("uname", exitsu.getUname());
-			System.out.println(exitsu.getUid());
-			session.setAttribute("uid", exitsu.getUid());
-			session.setAttribute("user", exitsu);
-			request.getRequestDispatcher("./meituan.jsp").forward(request, response);
+			response.sendRedirect("./login.jsp");
 		}else{
-			request.getRequestDispatcher("./login.jsp").forward(request, response);
+			response.sendRedirect("./login.jsp");
 			
 		}
-		
-				
 	}
 
 	/**

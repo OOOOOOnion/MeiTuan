@@ -23,12 +23,14 @@ public class UserDao {
 			ResultSet rs = pstmt.executeQuery();
 			
 			if(rs.next()){
+				exitsu.setUid(rs.getInt("uid"));
 				exitsu.setUname(rs.getString("uname"));
+				exitsu.setUaccount(rs.getString("uaccount"));
+				exitsu.setPassword(rs.getString("password"));
+				exitsu.setAddress(rs.getString("address"));
+				exitsu.setPhone(rs.getString("phone"));
 				
-				/*exitsu.setPassword(rs.getString("password"));
-				dbuser.setAge(rs.getInt("age"));
-				dbuser.setPhone(rs.getString("phone"));
-				dbuser.setAddress(rs.getString("address"));*/
+				
 				return exitsu;
 			}else{
 				
@@ -39,6 +41,7 @@ public class UserDao {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 		return exitsu;
 		
 		
@@ -92,5 +95,33 @@ public class UserDao {
 		return flag;
 		
 		
+	}
+
+	public boolean modify(Users u) {
+		// TODO Auto-generated method stub
+		boolean flag = false;
+
+		Connection conn = null;  
+		conn = JDBCUtil.getConnection();
+		String sql = "update users set uname=?,uaccount=?,password=?,phone=?,address=? whrer uid=?";
+		try {
+				PreparedStatement pstmt = conn.prepareStatement(sql);
+				pstmt.setString(1, u.getUname());
+				pstmt.setString(2, u.getUaccount());
+				pstmt.setString(3, u.getPassword());
+				pstmt.setString(4, u.getPhone());
+				pstmt.setString(5, u.getAddress());
+				pstmt.setInt(6, u.getUid());
+				int i = pstmt.executeUpdate();
+				
+				if (i == 1) {
+					flag = true;
+				} else {
+					flag = false;
+				}
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return false;
 	}
 }

@@ -9,6 +9,10 @@
 			 color: white ; 
 					
 		}
+		#top-search a{
+			color:black;
+			text-decoration:none;
+		}
 	body{
 			margin:0px auto;
 			width: 1344px;

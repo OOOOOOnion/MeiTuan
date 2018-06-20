@@ -49,8 +49,8 @@ public class ShowShopsServlet extends HttpServlet {
 		if(request.getParameter("page")!=null){
 			page = Integer.parseInt(request.getParameter("page"));
 		}
-		System.out.println(name);
-		System.out.println(page);
+		/*System.out.println(name);
+		System.out.println(page);*/
 		pagebean.setPage(page);
 		
 		ArrayList<Shops> shops = new ArrayList<Shops>();
