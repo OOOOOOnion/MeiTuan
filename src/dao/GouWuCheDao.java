@@ -8,16 +8,16 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Dingdan;
+import model.GouWuChe;
 import model.Shangpin;
 
-public class DingdanDao {
-	public void addDingdanInfo(Dingdan dingdan) throws Exception {
-		String ddid = dingdan.getDdid();
-		String ddname=dingdan.getDdname();
-		String ddprice=dingdan.getDdprice();
-		String ddpic=dingdan.getDdpic();
-		String ddnum=dingdan.getDdnum();
+public class GouWuCheDao {
+	public void addDingdanInfo(GouWuChe gouwuche) throws Exception {
+		String ddid =gouwuche.getGwcid();
+		String ddname=gouwuche.getGwcname();
+		String ddprice=gouwuche.getGwcprice();
+		String ddpic=gouwuche.getGwcpic();
+		String ddnum=gouwuche.getGwcnum();
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/test", "root", "root");
 		String sql = "INSERT INTO dingdantextTwo VALUES (?,?,?,?,?)";

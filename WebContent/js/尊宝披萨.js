@@ -51,7 +51,7 @@ $(function(){
 
 
  function tianjia(id){
-	 var ddid=$(id).attr("id");
+	 var spid=$(id).attr("id");//商品id
 	 var $i= $(id).siblings();  
 	 var pic=$i.eq(0).attr('src');
      var name = $i.eq(2).html();
@@ -73,10 +73,12 @@ $(function(){
 		        var sum=parseInt($("#总价价格").text());
 		    	var summ=sum+parseInt(price);
 		    	$("#总价价格").text(summ);
+	var sjid=$("#隐藏").val();// 商家id
+	alert(userid);
 	$.ajax({
         url:"GouWuCheSrevlet",
         type: "post",
-        data:{"ddid":ddid,"name":name,"price":pprice,"pic":pic,"ddnum":summ},
+        data:{"spid":spid,"sjid":sjid},
     });
 }
  
