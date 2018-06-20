@@ -12,7 +12,5 @@ public class ShowShopsService {
 		ShowShopsDao showShopsDao = new ShowShopsDao();
 		list = showShopsDao.QueryShopsByPage(pagebean);
 		return list;
-		
-		
 	}
 }
