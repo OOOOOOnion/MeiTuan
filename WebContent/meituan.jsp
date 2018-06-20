@@ -32,7 +32,7 @@
 				<div id="我的">
 				
 				<%  if(session.getAttribute("uname")!=null){ %>
-						欢迎：<a href="./uinfo/uinfo.jsp"><%=session.getAttribute("uname") %><%=session.getAttribute("uid") %></a>
+						欢迎：<a href="./uinfo/uinfo.jsp"><%=session.getAttribute("uname") %><%-- <%=session.getAttribute("uid") %> --%></a>
 						<a href="./UserQuitServlet">退出</a>
 				<%}else{%>
 					<a href="./register.jsp">注册</a>  &nbsp;|&nbsp;
@@ -80,5 +80,6 @@
 		</div>
 	</div>
 <input type="hidden" id="page" value="1"> 
+
 </body>
 </html>

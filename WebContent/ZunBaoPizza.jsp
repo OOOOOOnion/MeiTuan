@@ -24,9 +24,11 @@
 		<div id ="top-address">
 			<div id="top-center">
 				<div id="定位">越秀区&nbsp;仲恺农业工程学院海珠校区&nbsp;|&nbsp;切换地址</div> 
+				
 				<div id="我的">
+				
 				<%  if(session.getAttribute("uname")!=null){ %>
-						欢迎：<a href="./uinfo.jsp"><%=session.getAttribute("uname") %></a>
+						欢迎：<a href="./uinfo/uinfo.jsp"><%=session.getAttribute("uname") %><%-- <%=session.getAttribute("uid") %> --%></a>
 						<a href="./UserQuitServlet">退出</a>
 				<%}else{%>
 					<a href="./register.jsp">注册</a>  &nbsp;|&nbsp;
@@ -36,13 +38,15 @@
 			</div>
 		</div>
 		<div id="top-search">
+			
 				<div id="logo"><img alt="" src="img/logo.png" ></div>
-				<div id="首页">首页</div>
-				<div id="我的订单">我的订单</div>
+				<div id="首页"><a href="./meituan.jsp">首页</a></div>
+				<div id="我的订单"><a href="./UserOrderServlet">我的订单</a></div>
 				<div id="申请加盟">申请加盟</div>
 				<div id="搜索">
 					<div id="搜索内容"><input type="text" value=""/></div>
 					<div id="搜索图标"><img alt="" src="img/搜索.png" ></div>
+					
 				</div>
 		</div>
 	</div>

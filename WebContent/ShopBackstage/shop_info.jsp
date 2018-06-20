@@ -30,8 +30,8 @@
 </head>
 <body>
 <div id="main">
-		<%  if(session.getAttribute("uname")!=null){ %>
-		<form id="info_form" action="${pageContext.request.contextPath}/UserInfoServlet" method="post" target="_top">
+		<%  if(session.getAttribute("sname")!=null){ %>
+		<form id="info_form" action="${pageContext.request.contextPath}/ShopInfoServlet" method="post" target="_top">
 			<table>
 				<tr>
 					<td></td>
@@ -39,23 +39,35 @@
 				</tr>
 				<tr>
 					<td>用&nbsp;&nbsp;户&nbsp;名:</td>
-					<td><input type="text" value="${sessionScope.user.uname}" id="uname"></td>
+					<td><input type="text" value="${sessionScope.shop.sname}" id="uname"></td>
 				</tr>
 				<tr>
 					<td>用户账号:</td>
-					<td><input type="text" value="${sessionScope.user.uaccount}" id="uaccount"></td>
+					<td><input type="text" value="${sessionScope.shop.saccount}" id="uaccount"></td>
 				</tr>
 				<tr>
 					<td>账号密码:</td>
-					<td><input type="text" value="${sessionScope.user.password}" id="password"></td>
+					<td><input type="text" value="${sessionScope.shop.password}" id="password"></td>
 				</tr>
 				<tr>
 					<td>手机号码:</td>
-					<td><input type="text" value="${sessionScope.user.phone}" id="phone"></td>
+					<td><input type="text" value="${sessionScope.shop.phone}" id="phone"></td>
 				</tr>
 				<tr>
-					<td>收货地址:</td>
-					<td><input type="text" value="${sessionScope.user.address}" id="address"></td>
+					<td>商家地址:</td>
+					<td><input type="text" value="${sessionScope.shop.address}" id="address"></td>
+				</tr>
+				<tr>
+					<td>起送价:</td>
+					<td><input type="text" value="${sessionScope.shop.startprice}" id="address"></td>
+				</tr>
+				<tr>
+					<td>配送费:</td>
+					<td><input type="text" value="${sessionScope.shop.deliveryfee}" id="address"></td>
+				</tr>
+				<tr>
+					<td>配送时间:</td>
+					<td><input type="text" value="${sessionScope.shop.deliverytime}" id="address"></td>
 				</tr>
 				<tr>
 					<td></td>
@@ -65,7 +77,7 @@
 			
 		</form>
 		<%}else{ %>
-		<p>你还未登陆！请返回<a href="${pageContext.request.contextPath}/login.jsp" target="_top">登陆</a>后重新查看个人信息</p>
+		<p>你还未登陆！请返回<a href="${pageContext.request.contextPath}/login.jsp" target="_top">登陆</a>后重新查看商店信息</p>
 		<%} %>
 		</div>
 </body>
