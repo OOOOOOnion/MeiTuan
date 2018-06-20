@@ -12,6 +12,7 @@
 	<script type="text/javascript" src="js/尊宝披萨.js"></script>
 </head>
 <body>
+
 	<% String sid=request.getParameter("id");%>
 	<div class="div-top">
 		<div id="下拉浮动框logo"><img alt="" src="img/logo.png" ></div>
@@ -89,6 +90,8 @@
 			<img alt="" src="img/经营许可.png" >
 		</div>
 	</div>
+		<%String userid=(String)session.getAttribute("userid");%>
 		<input type="hidden" id="隐藏" value=<%=sid%>>
+		<input type="hidden" id="隐藏框" value=<%=userid%>>
 </body>
 </html>
