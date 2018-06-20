@@ -23,4 +23,12 @@ public class UserService {
 		flag = userDao.isUserExists(ua);
 		return flag;
 	}
+
+	public boolean modify(Users u) {
+		// TODO Auto-generated method stub
+		boolean flag = false;
+		UserDao userDao = new UserDao();
+		flag = userDao.modify(u);
+		return flag;
+	}
 }

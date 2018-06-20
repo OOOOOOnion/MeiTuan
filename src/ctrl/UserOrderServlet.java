@@ -7,19 +7,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import service.UserService;
-
 /**
- * Servlet implementation class IsExistUaccountServlet
+ * Servlet implementation class UserOrderServlet
  */
-@WebServlet("/IsExistUaccountServlet")
-public class IsExistUaccountServlet extends HttpServlet {
+@WebServlet("/UserOrderServlet")
+public class UserOrderServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public IsExistUaccountServlet() {
+    public UserOrderServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,19 +27,7 @@ public class IsExistUaccountServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String ua = request.getParameter("uaccount");
-		/*System.out.println(ua);*/
-		//PrintWriter out = response.getWriter();
-		response.setContentType("text/html");
-		UserService userService = new UserService();
-		boolean flag = userService.isUserExists(ua);
-		if(flag){
-			response.getWriter().write("false");
-		}else{
-			response.getWriter().write("true");
-		}
-		
-		response.getWriter().flush();
+		response.getWriter().append("OrderServlet,Served at: ").append(request.getContextPath());
 	}
 
 	/**

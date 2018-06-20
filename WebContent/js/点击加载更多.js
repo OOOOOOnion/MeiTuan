@@ -4,7 +4,7 @@
 function changeBGC(id){
 			document.getElementById(id).style.backgroundColor='#e5e5e5';
 		}
-		function changeback(id){
+function changeback(id){
 			document.getElementById(id).style.backgroundColor='#FFFFFF';
 		}
 $(function () {  
