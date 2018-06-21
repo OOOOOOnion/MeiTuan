@@ -35,7 +35,7 @@ public class ShangpinDao {
 			s.setSpprice(spprice);
 			s.setSppic(sppic);
 			list.add(s);
-			System.out.println(s);
+		/*	System.out.println(s);*/
 			flag=rs.next();
 	}return list;
 }}

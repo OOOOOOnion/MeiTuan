@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import model.GouWuChe;
+
 import model.Shops;
 
 public class SjToSpDao {
@@ -35,7 +35,7 @@ public class SjToSpDao {
 			s.setStartprice(startprices);
 			s.setDeliveryfee(deliveryfee);
 			s.setDeliverytime(deliverytime);
-			System.out.println(sname);
+			/*System.out.println(sname);*/
 			list.add(s);
 			flag=rs.next();
 		}

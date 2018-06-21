@@ -68,11 +68,12 @@
 		</div>
 	</div>
 			<div id="商品展示"></div>
-	<form>
+	<!-- <form> -->
 	<div id="购物车">
 		<div id="结算">
 			<img id="购物车图标" src="img/购物车.png">
-			<input id="立即下单" type="submit">
+			<!-- <input id="立即下单" type="submit"> -->
+			<button id="立即下单" onclick="jiesuan()">下单</button>
 		</div>
 		<div id="商家配送费" class="购物车栏">
 			<span id="配送费字样">配送费</span>
@@ -85,7 +86,7 @@
 		<div id="购物车商品">
 		</div>
 	</div>
-	</form>
+	<!-- </form> -->
 	<div id="foot">
 		<div id="foot-more">
 				<img alt="" src="img/更多服务.png" >

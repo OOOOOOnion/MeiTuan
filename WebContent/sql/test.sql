@@ -11,11 +11,118 @@
  Target Server Version : 50717
  File Encoding         : 65001
 
- Date: 12/06/2018 11:01:23
+ Date: 21/06/2018 16:55:20
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for dingdan
+-- ----------------------------
+DROP TABLE IF EXISTS `dingdan`;
+CREATE TABLE `dingdan`  (
+  `oid` int(11) NOT NULL DEFAULT 0 COMMENT '订单id',
+  `sid` int(11) NOT NULL,
+  `uid` int(11) NULL DEFAULT NULL,
+  `spid` int(11) NOT NULL,
+  `spnum` int(11) NULL DEFAULT NULL,
+  `spprice` double(11, 2) NULL DEFAULT NULL,
+  `totalprice` double(11, 0) NULL DEFAULT NULL,
+  `state` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of dingdan
+-- ----------------------------
+INSERT INTO `dingdan` VALUES (1, 1, 1, 1, 1, 25.00, 25, '已完成');
+INSERT INTO `dingdan` VALUES (2, 1, 1, 1, 5, 25.00, 125, '待接单');
+INSERT INTO `dingdan` VALUES (2, 1, 1, 2, 1, 35.00, 35, '待接单');
+INSERT INTO `dingdan` VALUES (3, 1, 1, 1, 6, 25.00, 150, '待接单');
+INSERT INTO `dingdan` VALUES (3, 1, 1, 2, 1, 35.00, 35, '待接单');
+INSERT INTO `dingdan` VALUES (4, 1, 1, 1, 7, 25.00, 175, '待接单');
+INSERT INTO `dingdan` VALUES (4, 1, 1, 2, 1, 35.00, 35, '待接单');
+
+-- ----------------------------
+-- Table structure for dingdantexttwo
+-- ----------------------------
+DROP TABLE IF EXISTS `dingdantexttwo`;
+CREATE TABLE `dingdantexttwo`  (
+  `ddid` int(11) NULL DEFAULT NULL,
+  `ddname` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+  `ddprice` int(11) NULL DEFAULT NULL,
+  `ddpic` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+  `ddnum` int(11) NULL DEFAULT NULL
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Table structure for gouwuche
+-- ----------------------------
+DROP TABLE IF EXISTS `gouwuche`;
+CREATE TABLE `gouwuche`  (
+  `sid` int(11) NOT NULL,
+  `uid` int(11) NULL DEFAULT NULL,
+  `spid` int(11) NULL DEFAULT NULL,
+  `spname` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `spnum` int(11) NULL DEFAULT NULL,
+  `price` int(11) NULL DEFAULT NULL,
+  INDEX `sid_fk`(`sid`) USING BTREE,
+  INDEX `spid_fk`(`spid`) USING BTREE,
+  INDEX `uid_fk`(`uid`) USING BTREE,
+  CONSTRAINT `sid_fk` FOREIGN KEY (`sid`) REFERENCES `shops` (`sid`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `spid_fk` FOREIGN KEY (`spid`) REFERENCES `shangpintable` (`spid`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of gouwuche
+-- ----------------------------
+INSERT INTO `gouwuche` VALUES (1, 1, 1, '红烧排骨饭', 2, 25);
+
+-- ----------------------------
+-- Table structure for shangpintable
+-- ----------------------------
+DROP TABLE IF EXISTS `shangpintable`;
+CREATE TABLE `shangpintable`  (
+  `sjid` int(11) NOT NULL COMMENT '商家id',
+  `spid` int(11) NOT NULL COMMENT '商品id',
+  `spname` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL COMMENT '商品名称',
+  `spprice` varchar(10) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL COMMENT '商品价格',
+  `sppic` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL COMMENT '商品图片',
+  PRIMARY KEY (`spid`) USING BTREE,
+  INDEX `sjid`(`sjid`) USING BTREE,
+  CONSTRAINT `sjid` FOREIGN KEY (`sjid`) REFERENCES `shops` (`sid`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of shangpintable
+-- ----------------------------
+INSERT INTO `shangpintable` VALUES (1, 1, '红烧排骨饭', '25', 'sppic/1.jpg');
+INSERT INTO `shangpintable` VALUES (1, 2, '红烧排骨饭套餐', '35', 'sppic/2.jpg');
+INSERT INTO `shangpintable` VALUES (1, 3, '台湾卤肉饭', '30', 'sppic/3.jpg');
+INSERT INTO `shangpintable` VALUES (1, 4, '卤肉饭套餐', '35', 'sppic/4.jpg');
+INSERT INTO `shangpintable` VALUES (1, 5, '回锅肉盖浇饭', '30', 'sppic/5.jpg');
+INSERT INTO `shangpintable` VALUES (1, 6, '青菜饭', '20', 'sppic/6.jpg');
+INSERT INTO `shangpintable` VALUES (2, 7, '真功夫套餐', '35', 'sppic/7.jpg');
+INSERT INTO `shangpintable` VALUES (2, 8, '真功夫可乐套餐', '40', 'sppic/8.jpg');
+INSERT INTO `shangpintable` VALUES (2, 9, '真功夫茄子饭', '20', 'sppic/9.jpg');
+INSERT INTO `shangpintable` VALUES (2, 10, '真功夫卤肉可乐套餐', '45', 'sppic/10.jpg');
+INSERT INTO `shangpintable` VALUES (2, 11, '真功夫卤肉盖浇饭', '35', 'sppic/11.jpg');
+INSERT INTO `shangpintable` VALUES (3, 12, '超级苏丹王榴莲披萨', '88', 'sppic/12.png');
+INSERT INTO `shangpintable` VALUES (3, 13, '苏丹王榴莲披萨', '66', 'sppic/13.png');
+INSERT INTO `shangpintable` VALUES (3, 14, '披萨套餐', '69', 'sppic/14.png');
+INSERT INTO `shangpintable` VALUES (3, 15, '黑松露披萨', '99', 'sppic/15.png');
+INSERT INTO `shangpintable` VALUES (3, 16, '水果披萨', '88', 'sppic/16.png');
+INSERT INTO `shangpintable` VALUES (3, 17, '夏威夷水果披萨', '99', 'sppic/17.png');
+INSERT INTO `shangpintable` VALUES (4, 18, '香辣鸡腿汉堡', '15', 'sppic/18.jpg');
+INSERT INTO `shangpintable` VALUES (4, 19, '香辣鸡腿汉堡套餐', '25', 'sppic/19.jpg');
+INSERT INTO `shangpintable` VALUES (4, 20, '菠萝派', '13', 'sppic/20.jpg');
+INSERT INTO `shangpintable` VALUES (4, 21, '水果果汁', '15', 'sppic/21.jpg');
+INSERT INTO `shangpintable` VALUES (4, 22, '超级汉堡', '20', 'sppic/22.jpg');
+INSERT INTO `shangpintable` VALUES (5, 23, '这是什么粥', '10', 'sppic/23.jpg');
+INSERT INTO `shangpintable` VALUES (5, 24, '香菇粥', '11', 'sppic/24.jpg');
+INSERT INTO `shangpintable` VALUES (5, 25, '不知道什么粥', '12', 'sppic/25.jpg');
+INSERT INTO `shangpintable` VALUES (5, 26, '还是不知道什么粥', '13', 'sppic/26.jpg');
+INSERT INTO `shangpintable` VALUES (5, 27, '应该是鸡翅套餐吧', '20', 'sppic/27.jpg');
 
 -- ----------------------------
 -- Table structure for shops

@@ -56,7 +56,7 @@ $(function(){
 	 var pic=$i.eq(0).attr('src');
      var name = $i.eq(2).html();
      var price = $i.eq(4).html(); 
-     	var html = $(
+     	/*var html = $(
         				 "<div id='选中商品' class='购物车栏'>"
      						+"<div class='选中商品名称' id='"+name+"'>"+name+"</div>"
      						+"<div id='选中商品数量'>"
@@ -72,14 +72,51 @@ $(function(){
 		        var pprice=price;
 		        var sum=parseInt($("#总价价格").text());
 		    	var summ=sum+parseInt(price);
-		    	$("#总价价格").text(summ);
-	var sjid=$("#隐藏").val();// 商家id
-	alert(userid);
+		    	$("#总价价格").text(summ);*/
+		    	var sjid=$("#隐藏").val();// 商家id
+
 	$.ajax({
-        url:"GouWuCheSrevlet",
+        url:"GouWuCheServlet",
         type: "post",
-        data:{"spid":spid,"sjid":sjid},
-    });
+        data:{"spid":spid,
+        	"sjid":sjid,
+        	"spname":name,
+        	"price":price
+        	},
+        dataType:"json",
+        success : function(data) {
+        	var information = $("#购物车商品");  
+ 	        var html = '';  
+ 	       $("#购物车商品").empty();
+ 	       var totalprice = 0;
+ 	        for (var i = 0; i < data.length; i++) {  
+ 	        	var html = $(
+       				 "<div id='选中商品' class='购物车栏'>"
+    						+"<div class='选中商品名称' id='"+data[i].spid+"'>"+data[i].spname+"</div>"
+    						+"<div id='选中商品数量'>"
+    							+"<form>"
+    								+"<input type=button value='x' id='"+data[i].spid+"'  onclick='shanchu(this)'>"
+    							+"</form>"
+    							+"</div>"
+    						+"<div class='选中商品价格'  id='"+data[i].spnum+"'>" +
+    									"<span id='选中商品价格符号'>数量:</span>"+
+    						"<span id='选中商品价格金额'>"+data[i].spnum+"</span></div>"
+       				 +"</div>");
+ 	        	totalprice +=data[i].price*data[i].spnum;
+ 	        	information.append(html);  
+		        
+ 			}
+ 	      /*  alert(totalprice)*/
+ 	       
+	        /*var sum=parseInt($("#总价价格").text("0"));
+	    	var summ=sum+totalprice;*/
+	    	$("#总价价格").text(totalprice);
+         }
+        
+    });	
+		    	/*alert(sjid);
+		    	alert(spid);
+		    	window.location.href="GouWuCheServlet?spid="+spid+"&sjid="+sjid;*/
 }
  
  function shanchu(id){
@@ -92,3 +129,7 @@ $(function(){
 	
  }
 
+ function jiesuan(){
+	 var sjid=$("#隐藏").val();// 商家id
+	 window.location.href="UserNewOrderServlet?&sjid="+sjid;
+ }
