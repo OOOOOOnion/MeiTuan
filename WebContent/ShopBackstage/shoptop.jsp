@@ -59,7 +59,7 @@
 			<span class="欢迎">欢迎来到&nbsp&nbsp<%=session.getAttribute("sjname")%>&nbsp&nbsp的后台</span>
 			<a class="返回首页" href="#">[返回首页]</a>
 			<span class="间隔符">|</span>
-			<a class="安全退出" href="#">[安全退出]</a>
+			<a class="安全退出" href="${pageContext.request.contextPath}/SjQuitServlet" target="_top">[安全退出]</a>
 		</div>
 </body>
 </html>

@@ -1,11 +1,19 @@
 package ctrl;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import bean.PageBean;
+import model.Order;
+
+import service.UserOrderService;
+import service.UserService;
 
 /**
  * Servlet implementation class UserOrderServlet
@@ -27,7 +35,29 @@ public class UserOrderServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("OrderServlet,Served at: ").append(request.getContextPath());
+		int page = 0;
+		if(request.getParameter("page") != null){
+		 page = Integer.parseInt(request.getParameter("page"));
+		}
+		if(page < 1){
+			page = 1;
+		}
+		
+		PageBean pageBean = new PageBean();
+		pageBean.setPage(page);
+		pageBean.setPagesize(5);
+		UserOrderService userOrderService = new UserOrderService();
+		int size= userOrderService.QueryAllOrder();
+		
+		pageBean.setTotalpage(size/5+1);
+		if(page > pageBean.getTotalpage()){
+			pageBean.setPage( pageBean.getTotalpage());
+		}
+		ArrayList<Order> list = userOrderService.QueryOrderByPage(pageBean);
+		request.setAttribute("OrderList", list);
+		request.setAttribute("pageBean", pageBean);
+		System.out.println(pageBean);
+		request.getRequestDispatcher("uinfo/myorder.jsp").forward(request, response);
 	}
 
 	/**

@@ -28,7 +28,7 @@ public class ShowShopsDao {
 				s.setSname(rs.getString("sname"));
 				s.setAddress(rs.getString("address"));
 				s.setSpic(rs.getString("spic"));
-				s.setStartprice(rs.getDouble("staringprice"));
+				s.setStartprice(rs.getDouble("startprice"));
 				s.setDeliveryfee(rs.getDouble("deliveryfee"));
 				s.setDeliverytime(rs.getDouble("deliverytime"));
 				//System.out.println(s);
