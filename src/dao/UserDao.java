@@ -130,33 +130,24 @@ public class UserDao {
 	
 	
 	
-	public Admin adminlogin(Admin admin){
+	public Admin adminlogin(Admin admin) throws SQLException{
 		Admin a = new Admin();
 		Connection conn = null;  
 		conn = JDBCUtil.getConnection();
 		String sql  = "select * from admin where adminaccount = ? and adminpassword = ?";
-		try {
-			PreparedStatement pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, a.getAdminaccount());
-			pstmt.setString(2, a.getAdminpassword());
-			ResultSet rs = pstmt.executeQuery();
-
-			if(rs.next()){
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1, admin.getAdminaccount());
+		System.out.println(admin.getAdminaccount());
+		pstmt.setString(2, admin.getAdminpassword());
+		ResultSet rs = pstmt.executeQuery();
+		if(rs.next()){
+				a.setAdminid(rs.getInt("adminid"));
 				a.setAdminaccount(rs.getString("adminaccount"));
 				a.setAdminpassword(rs.getString("adminpassword"));
+				System.out.println(admin);
 				return a;
 			}else{
-				
 				return null;
-				
 			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
-		
-		return a;
-		
-		
 	}
-}

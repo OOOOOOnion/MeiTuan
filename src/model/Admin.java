@@ -1,6 +1,13 @@
 package model;
 
 public class Admin {
+	private int adminid;
+	public int getAdminid() {
+		return adminid;
+	}
+	public void setAdminid(int adminid) {
+		this.adminid = adminid;
+	}
 	private String adminaccount;
 	private String adminpassword;
 	public String getAdminaccount() {

@@ -56,7 +56,7 @@
 		<div class="美团外卖">美团外卖</div>
 		<div class="后台管理">欢迎来到后台管理系统</div>
 		<div class="right">
-			<span class="欢迎">欢迎您：</span>
+			<span class="欢迎">欢迎您：&nbsp&nbsp<%=session.getAttribute("adminaccount")%>&nbsp&nbsp</span>
 			<a class="返回首页" href="http://localhost:8080/meituan/QueryUserInfoServlet" target="right">[返回首页]</a>
 			<span class="间隔符">|</span>
 			<a class="安全退出" href="#">[安全退出]</a>

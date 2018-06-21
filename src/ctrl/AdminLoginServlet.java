@@ -1,6 +1,8 @@
 package ctrl;
 
 import java.io.IOException;
+import java.sql.SQLException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,16 +15,16 @@ import model.Users;
 import service.UserService;
 
 /**
- * Servlet implementation class LoginServlet
+ * Servlet implementation class AdminLoginServlet
  */
-@WebServlet("/UserLoginServlet")
-public class UserLoginServlet extends HttpServlet {
+@WebServlet("/AdminLoginServlet")
+public class AdminLoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public UserLoginServlet() {
+    public AdminLoginServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,32 +34,33 @@ public class UserLoginServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 		HttpSession session = request.getSession();
-		String uaccount = request.getParameter("uaccount");
+		String account = request.getParameter("account");
 		String password = request.getParameter("password");
-	/*	System.out.println(uaccount);
-		System.out.println(password);*/
-		String  autologin = request.getParameter("autologin") ;
-		
-		Users loginu = new Users();
-		loginu.setUaccount(uaccount);
-		loginu.setPassword(password);
+		System.out.println(account);
+
+		Admin admin = new Admin();
+		admin.setAdminaccount(account);
+		admin.setAdminpassword(password);
 		UserService userService = new UserService();
+		Admin adminexits;
+		try {
+			adminexits = userService.adminlogin(admin);
+			if(adminexits!=null){
+				session.setAttribute("adminaccount", adminexits.getAdminaccount());
+				session.setAttribute("adminpassword",adminexits.getAdminpassword());
+				session.setAttribute("adminid",adminexits.getAdminid());
+				request.getRequestDispatcher("/frameset/frameset.jsp").forward(request, response);
+			}
+			else{
+				request.getRequestDispatcher("./Admin.jsp").forward(request, response);}
 		
-		Users exitsu = userService.login(loginu);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}}
 		
-		if(exitsu!=null){
-			session.setAttribute("uname", exitsu.getUname());
-			session.setAttribute("uid", exitsu.getUid());
-			session.setAttribute("user", exitsu);
-			request.getRequestDispatcher("./meituan.jsp").forward(request, response);
-		}
-		else{
-			request.getRequestDispatcher("./login.jsp").forward(request, response);}
-		
-		
-				
-	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)

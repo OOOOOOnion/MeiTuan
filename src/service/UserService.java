@@ -1,5 +1,7 @@
 package service;
 
+import java.sql.SQLException;
+
 import dao.UserDao;
 import model.Admin;
 import model.Users;
@@ -11,7 +13,7 @@ public class UserService {
 		return eu;
 	}
 
-	public Admin adminlogin(Admin admin){
+	public Admin adminlogin(Admin admin) throws SQLException{
 		UserDao udao = new UserDao();
 		Admin a=udao.adminlogin(admin);
 		return a;
