@@ -35,7 +35,7 @@
                 <li>
                     <a href="#" aria-expanded="false">账户管理 <span class="fa arrow"></span></a>
                     <ul aria-expanded="false">
-                        <li><a href="#" target="right">用户信息设置</a></li>
+                        <li><a href="./shop_info.jsp"target="right">商家信息设置</a></li>
                        <!--  <li><a href="#">添加菜品</a></li>
 
                         <li><a href="http://onokumus.com" target="right">删除用户信息</a></li>

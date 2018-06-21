@@ -30,7 +30,7 @@
 </head>
 <body>
 <div id="main">
-		<%  if(session.getAttribute("sname")!=null){ %>
+		<%  if(session.getAttribute("sjname")!=null){ %>
 		<form id="info_form" action="${pageContext.request.contextPath}/ShopInfoServlet" method="post" target="_top">
 			<table>
 				<tr>
@@ -39,35 +39,35 @@
 				</tr>
 				<tr>
 					<td>用&nbsp;&nbsp;户&nbsp;名:</td>
-					<td><input type="text" value="${sessionScope.shop.sname}" id="uname"></td>
+					<td><input type="text" value="${sessionScope.sj.sname}" id="sname"></td>
 				</tr>
 				<tr>
 					<td>用户账号:</td>
-					<td><input type="text" value="${sessionScope.shop.saccount}" id="uaccount"></td>
+					<td><input type="text" value="${sessionScope.sj.saccount}" id="saccount"></td>
 				</tr>
 				<tr>
 					<td>账号密码:</td>
-					<td><input type="text" value="${sessionScope.shop.password}" id="password"></td>
+					<td><input type="text" value="${sessionScope.sj.password}" id="password"></td>
 				</tr>
 				<tr>
 					<td>手机号码:</td>
-					<td><input type="text" value="${sessionScope.shop.phone}" id="phone"></td>
+					<td><input type="text" value="${sessionScope.sj.phone}" id="phone"></td>
 				</tr>
 				<tr>
 					<td>商家地址:</td>
-					<td><input type="text" value="${sessionScope.shop.address}" id="address"></td>
+					<td><input type="text" value="${sessionScope.sj.address}" id="address"></td>
 				</tr>
 				<tr>
 					<td>起送价:</td>
-					<td><input type="text" value="${sessionScope.shop.startprice}" id="address"></td>
+					<td><input type="text" value="${sessionScope.sj.startprice}" id="startprice"></td>
 				</tr>
 				<tr>
 					<td>配送费:</td>
-					<td><input type="text" value="${sessionScope.shop.deliveryfee}" id="address"></td>
+					<td><input type="text" value="${sessionScope.sj.deliveryfee}" id="deliveryfee"></td>
 				</tr>
 				<tr>
 					<td>配送时间:</td>
-					<td><input type="text" value="${sessionScope.shop.deliverytime}" id="address"></td>
+					<td><input type="text" value="${sessionScope.sj.deliverytime}" id="deliverytime"></td>
 				</tr>
 				<tr>
 					<td></td>
@@ -77,7 +77,7 @@
 			
 		</form>
 		<%}else{ %>
-		<p>你还未登陆！请返回<a href="${pageContext.request.contextPath}/login.jsp" target="_top">登陆</a>后重新查看商店信息</p>
+		<p>你还未登陆！请返回<a href="${pageContext.request.contextPath}/sjLogin.jsp" target="_top">登陆</a>后重新查看商店信息</p>
 		<%} %>
 		</div>
 </body>

@@ -29,7 +29,12 @@ public class SjLoginDao {
 			
 			if(rs.next()){
 				exitssj.setSid(rs.getInt("sid"));
-				exitssj.setSname(rs.getString("sname"));				
+				exitssj.setSpic(rs.getString("spic"));
+				exitssj.setSname(rs.getString("sname"));
+				exitssj.setAddress(rs.getString("address"));
+				exitssj.setPassword(rs.getString("password"));
+				exitssj.setPhone(rs.getString("phone"));
+				exitssj.setSaccount(rs.getString("saccount"));
 				return exitssj;
 			}else{
 				
