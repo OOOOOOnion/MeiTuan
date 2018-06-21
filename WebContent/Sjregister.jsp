@@ -22,13 +22,16 @@
 	<div id="横线"></div>
 	<div id="注册div">
 	
-<form id="signupForm" method="post" action="UserRegisteServlet" style="display:inline;">
+<form id="signupForm" method="post" action="SjRegisterServlet" style="display:inline;">
 	
   <table>
- 
+  	<tr>
+      <td class="t"><label for="sjname">商家名称</label></td>
+      <td><input id="sjname" name="sjname" type="text"></td>
+    </tr>
     <tr>
-      <td class="t"><label for="uaccount">账户名</label></td>
-      <td><input id="uaccount" name="uaccount" type="text"></td>
+      <td class="t"><label for="sjaccount">商家账户名</label></td>
+      <td><input id="sjaccount" name="sjaccount" type="text"></td>
       
     </tr>
     

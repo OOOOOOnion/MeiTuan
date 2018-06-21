@@ -68,6 +68,8 @@ public class UserDao {
 		}catch(Exception e){
 			e.printStackTrace();
 		}
+		System.out.println(flag);
+
 		return flag;
 		}
 

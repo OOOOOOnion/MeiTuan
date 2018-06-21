@@ -3,6 +3,7 @@
 }
 body{
 	width:1354px;
+	position:relative;
 }
 #reg-top-logo{
 
@@ -45,4 +46,11 @@ hr{
 }
 #reg-foot img{
 	margin-left:500px;
+}
+
+#商家入驻{
+	position:absolute;
+	top:61px;
+	left:800px;
+	width:400px;
 }
