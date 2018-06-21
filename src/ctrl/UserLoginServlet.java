@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import model.Admin;
 import model.Users;
 import service.UserService;
 
@@ -40,8 +41,12 @@ public class UserLoginServlet extends HttpServlet {
 		Users loginu = new Users();
 		loginu.setUaccount(uaccount);
 		loginu.setPassword(password);
+		Admin admin = new Admin();
+		admin.setAdminaccount(uaccount);
+		admin.setAdminpassword(password);
 		UserService userService = new UserService();
 		Users exitsu = userService.login(loginu);
+		Admin adminexits=userService.adminlogin(admin);
 		if(exitsu!=null){
 			session.setAttribute("uname", exitsu.getUname());
 			
@@ -53,6 +58,14 @@ public class UserLoginServlet extends HttpServlet {
 			
 		}
 		
+		if(adminexits!=null){
+			session.setAttribute("adminaccount", adminexits.getAdminaccount());
+			session.setAttribute("adminpassword",adminexits.getAdminpassword());
+			request.getRequestDispatcher("/ShopBackstage/shopframeset.jsp").forward(request, response);
+		}else{
+			request.getRequestDispatcher("./login.jsp").forward(request, response);
+			
+		}
 				
 	}
 

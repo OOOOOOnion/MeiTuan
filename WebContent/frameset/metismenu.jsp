@@ -33,40 +33,11 @@
                     </li>
                 <li>
                     <a href="#" aria-expanded="false">用户信息管理 <span class="fa arrow"></span></a>
-                    <ul aria-expanded="false">
-                        <li><a href="../meituan.jsp" target="right">查看用户信息</a></li>
-                        <li><a href="#">添加用户信息</a></li>
-
-                        <li><a href="http://onokumus.com" target="right">删除用户信息</a></li>
-
-                        <li><a href="http://www.baidu.com" target="right">删除用户信息</a></li>
-
-                        <li><a href="#">修改用户信息</a></li>
-                    </ul>
                 </li>
                 <li>
                     <a href="#" aria-expanded="false">商家信息管理<span class="fa arrow"></span></a>
                     <ul aria-expanded="false">
-                        <li><a href="#">查看商家信息</a></li>
-                        <li><a href="#">添加商家信息</a></li>
-                        <li><a href="#">删除商家信息</a></li>
-                        <li><a href="#">修改商家信息</a></li>
-                        <li>
-                            <a href="#" aria-expanded="false">其他<span class="fa plus-minus"></span></a>
-                            <ul aria-expanded="false">
-                                <li><a href="#">其他1</a></li>
-                                <li><a href="#">其他2</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#" aria-expanded="false">管理员信息管理<span class="fa arrow"></span></a>
-                    <ul aria-expanded="false">
-                        <li><a href="#">查看管理员信息</a></li>
-                        <li><a href="#">添加管理员信息</a></li>
-                        <li><a href="#">删除管理员信息</a></li>
-                        <li><a href="#">修改管理员信息</a></li>
+                        <li><a href="http://localhost:8080/meituan/QuerySjInfoServlet" target="right">查看商家信息</a></li>
                     </ul>
                 </li>
             </ul>

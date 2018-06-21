@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import model.Admin;
 import model.Users;
 import util.JDBCUtil;
 
@@ -125,5 +126,37 @@ public class UserDao {
 			e.printStackTrace();
 		}
 		return false;
+	}
+	
+	
+	
+	public Admin adminlogin(Admin admin){
+		Admin a = new Admin();
+		Connection conn = null;  
+		conn = JDBCUtil.getConnection();
+		String sql  = "select * from admin where adminaccount = ? and adminpassword = ?";
+		try {
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, a.getAdminaccount());
+			pstmt.setString(2, a.getAdminpassword());
+			ResultSet rs = pstmt.executeQuery();
+
+			if(rs.next()){
+				a.setAdminaccount(rs.getString("adminaccount"));
+				a.setAdminpassword(rs.getString("adminpassword"));
+				return a;
+			}else{
+				
+				return null;
+				
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return a;
+		
+		
 	}
 }
